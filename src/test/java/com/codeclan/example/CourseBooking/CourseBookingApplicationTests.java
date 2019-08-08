@@ -84,5 +84,9 @@ public class CourseBookingApplicationTests {
 		assertEquals("Data Entry", found.get(1).getName());
 	}
 
+	@Test
+	public void canFindCustomersByCourse(){
+		List<Customer> found = customerRepository.findCustomersByCourse(new Long(2));
+	}
 
 }
