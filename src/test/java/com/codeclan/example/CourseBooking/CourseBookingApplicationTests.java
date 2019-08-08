@@ -59,4 +59,12 @@ public class CourseBookingApplicationTests {
 		courseRepository.save(course);
 	}
 
+	@Test
+	public void canSaveCourseAndBooking(){
+		course = new Course("Intro to Python", "Edinburgh", 2);
+		courseRepository.save(course);
+		booking = new Booking("15-09-19", course);
+		bookingRepository.save(booking);
+	}
+
 }
