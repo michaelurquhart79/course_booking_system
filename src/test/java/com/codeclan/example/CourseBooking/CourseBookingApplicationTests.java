@@ -87,6 +87,7 @@ public class CourseBookingApplicationTests {
 	@Test
 	public void canFindCustomersByCourse(){
 		List<Customer> found = customerRepository.findCustomersByCourse(new Long(2));
+		assertEquals(2, found.size());
 	}
 
 }
